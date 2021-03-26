@@ -6,6 +6,8 @@ services:
     working_dir: /home/node/app
     volumes:
     - ./:/home/node/app
+    environment:
+      - FRAMES_DIR=frames.dick
     ports:
     - 8938:3000
     command: "npm start"
