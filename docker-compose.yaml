@@ -7,7 +7,8 @@ services:
     volumes:
     - ./:/home/node/app
     environment:
-      - FRAMES_DIR=frames.dick
+      FRAMES_DIR: frames.dick
+      FRAME_MS: 500
     ports:
     - 8938:3000
     command: "npm start"

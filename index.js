@@ -64,7 +64,7 @@ const streamer = (stream, opts) => {
     stream.push(colors[colorsOptions[newColor]](frames[index]));
 
     index = (index + 1) % frames.length;
-  }, 70);
+  }, process.env.FRAME_MS || 70);
 };
 
 const validateQuery = ({ flip }) => ({
