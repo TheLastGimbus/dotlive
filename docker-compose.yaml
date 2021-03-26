@@ -1,0 +1,11 @@
+version: "3"
+services:
+  dotlive:
+    image: node:15
+    restart: unless-stopped
+    working_dir: /home/node/app
+    volumes:
+    - ./:/home/node/app
+    ports:
+    - 8938:3000
+    command: "npm start"
